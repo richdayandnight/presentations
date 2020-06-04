@@ -11,7 +11,17 @@
 
     <link rel="stylesheet" href="../dist/reset.css" />
     <link rel="stylesheet" href="../dist/reveal.css" />
-    <link rel="stylesheet" href="../dist/theme/night.css" id="theme" />
+    <link rel="stylesheet" href="../dist/theme/blood.css" id="theme" />
+    <link rel="stylesheet" href="../dist/custom-gc.css" id="theme" />
+
+    <style>
+      .container {
+        display: flex;
+      }
+      .col {
+        flex: 1;
+      }
+    </style>
 
     <!-- Theme used for syntax highlighted code -->
     <link
@@ -23,51 +33,306 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <section>Slide 1</section>
-        <section>Slide 2</section>
-        <section data-markdown>
-          <textarea data-template>
-					  ## Slide 1
-					  A paragraph with some text and a [link](http://hakim.se).
-					  ---
-					  ## Slide 2
-					  ---
-					  ## Slide 3
-					</textarea
+        <section>
+          <h3>Visual Essay &#x1F4C8;</h3>
+          <h4>Week 1</h4>
+          <ul>
+            <li class="fragment fade-in">
+              Read until Chapter 12 of <br />
+              Interactive Data Visualization for the Web <br />
+              by Scott Murray <br />
+
+              <img src="images/datavizfortheweb.png" height="300" width="500" />
+              <a
+                href="https://github.com/richdayandnight/data-science-notebook/tree/master/interactive-data-visualization-for-the-web"
+              >
+                <p>Notes Uploaded online</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Bar Chart</h3>
+          <div
+            class="fig-container no-margin-top"
+            data-file="d3fig/bar_chart.html"
+            data-preload
+          ></div>
+        </section>
+        <section>
+          <h3>Bar Chart with tooltip</h3>
+          <div
+            class="fig-container no-margin-top"
+            data-file="d3fig/bar_chart_with_tooltip.html"
+            data-preload
+          ></div>
+        </section>
+
+        <section>
+          <h3>Bar Chart with slider</h3>
+          <div
+            class="fig-container no-margin-top"
+            data-file="d3fig/bar_chart_slider.html"
+            data-preload
+          ></div>
+        </section>
+
+        <section>
+          <h3>Bar Chart with slider</h3>
+          <div
+            class="fig-container no-margin-top"
+            data-file="d3fig/bar_chart_slider.html"
+            data-preload
+          ></div>
+        </section>
+
+        <section>
+          <h3>Scatter Plot with filter</h3>
+          <div
+            class="fig-container no-margin-top"
+            data-file="d3fig/scatter_plot_filter.html"
+            data-preload
+          ></div>
+        </section>
+
+        <section>
+          <h3>Donut chart</h3>
+          <div
+            class="fig-container no-margin-top"
+            data-file="d3fig/donut_chart.html"
+            data-preload
+          ></div>
+        </section>
+
+        <section>
+          <h3>Visual Essay &#x1F4C8;</h3>
+          <h4>Week 2</h4>
+          <ul>
+            <li class="fragment fade-in">
+              Read until Chapter 13 of <br />
+              Interactive Data Visualization for the Web <br />
+              by Scott Murray <br />
+            </li>
+            <li class="fragment fade-in">
+              Researched on how to deploy d3 visualizations online
+            </li>
+          </ul>
+        </section>
+
+        <section
+          data-markdown
+          class="fig-container"
+          data-file="d3fig/force_layout.html"
+          data-no-background
+        >
+          <script type="text/template">
+            ### How to Deploy D3 viz Online
+
+            #### Option 1
+
+
+            <div class='fancy-border' style="position: absolute; width:80%; left: 100px; top: 250px; ">
+                HTML + CSS + D3.js  <br> <p> hover, click, simple interaction </p>
+            </div>
+          </script>
+        </section>
+
+        <section data-markdown data-no-background>
+          <script type="text/template">
+            ### How to Deploy D3 viz Online
+
+            #### Option 2
+
+            <div class='fancy-border' style="position: absolute; width:80%; left: 100px; top: 250px; ">
+                React + D3.js
+                <p> Talks Online <br> <a
+                  href="https://www.youtube.com/watch?v=zXBdNDnqV2Q&t"
+                >Shirley Wu's Talk </a> <br> Software Engineer specializing in Data Visualization<br>
+                <a
+                href="https://www.youtube.com/watch?v=polu3EWCQCo"
+              >Elijah Meek's Talk </a> <br> Author of D3 in Action & <br> Chief Visualization Officer of Noteable </p>
+
+            </div>
+          </script>
+        </section>
+        <section data-markdown data-no-background>
+          <script type="text/template">
+            ### How to Deploy D3 viz Online
+
+            #### Option 3
+
+            <div class='fancy-border' style="position: absolute; width:80%; left: 100px; top: 250px; ">
+                Gatsby + React + D3.js
+            </div>
+          </script>
+        </section>
+        <section data-markdown data-no-background>
+          <script type="text/template">
+            ### How to Deploy D3 viz Online
+
+            #### Option 4
+
+            <div class='fancy-border' style="position: absolute; width:80%; left: 100px; top: 250px; ">
+                Reveal.js + D3.js
+                <p> For Presentations like this one &#x1F609;</p>
+            </div>
+          </script>
+        </section>
+
+        <section>
+          <h3>Embed interactive D3 visualizations with Reveal.js</h3>
+          <div class="row no-margin-top">
+            <div class="col-50">
+              <p>
+                Embed D3 visualizations into slides, and keep the original
+                interactivity.
+              </p>
+              <p>
+                (click on the globe and drag it to explore the different paths!)
+              </p>
+              <p>
+                <span class="u">Visualization:</span><br /><a
+                  href="https://bl.ocks.org/Fil/63366253a5d2f00640c15b096c29a38c"
+                  target="_blank"
+                  >Eclipses path</a
+                >
+                by Philippe Riviere and friends
+              </p>
+              <p class="small">
+                (Press right arrow or space bar to navigate to next slide)
+              </p>
+            </div>
+            <div
+              class="col-50 fig-container no-margin-top"
+              data-file="d3fig/eclipses.html"
+            ></div>
+          </div>
+        </section>
+        <section
+          data-background-iframe="https://pudding.cool/2017/03/hamilton/"
+          data-background-interactive
+        >
+          <div
+            style="position: absolute; width: 40%; right: 0; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-size: 20px; text-align: left;"
           >
-		</section>
-		<section>
-			<div class="fig-container no-margin-top" data-file="d3fig/gooey.html"></div>
-		</section>
+            <h2>Iframe Backgrounds</h2>
+            <p>
+              Since reveal.js runs on the web, you can easily embed other web
+              content. Try interacting with the page in the background.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h3>Visual Essay &#x1F4C8;</h3>
+          <h4>Week 2 (Cont.)</h4>
+          <ul>
+            <li class="fragment fade-in">
+              Experimented
+              <ul>
+                <li class="fragment fade-in">Angular?</li>
+                <li class="fragment fade-in">Gatsby with D3</li>
+                <ul>
+                  <li class="fragment fade-in">Static &#x2714;</li>
+                  <li class="fragment fade-in">
+                    Changing states? &#x274C; * worked, but I still don't
+                    understand what's going on &#x1F622;
+                  </li>
+                </ul>
+              </ul>
+            </li>
+          </ul>
+          <div>
+            <img
+              class="fragment fade-in"
+              src="images/donut1.png"
+              height="275"
+              width="400"
+            />
+            <img
+              class="fragment fade-in"
+              src="images/donut2.png"
+              height="275"
+              width="400"
+            />
+          </div>
+        </section>
+        <section>
+          <h3>Gaps in Knowledge &#x1F9E0;</h3>
+          <ul>
+            <li class="fragment fade-in">
+              does not have a foundation for Javascript (VanillaJS)
+            </li>
+            <li class="fragment fade-in">
+              in turn, I have difficulty in understanding React
+            </li>
+            <li class="fragment fade-in">
+              in addition, I think I should start making viz with data not from
+              the tutorials
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Roadmap &#x1F3C3; &#x26C5;</h3>
+          <h4>Week 3-4</h4>
+          <ul>
+            <li class="fragment fade-in">
+              study Javascript through
+              <a href="https://eloquentjavascript.net/">Eloquent Javascript</a>
+            </li>
+            <li class="fragment fade-in">
+              create d3 visualization from chosen dataset (if time permits,
+              implement minimal scroll animation)
+            </li>
+          </ul>
+        </section>
+        <section>
+          <div
+            class="fig-container no-margin-top"
+            data-file="d3fig/gooey.html"
+            data-preload
+          >
+            <h4>End</h4>
+          </div>
+        </section>
       </div>
     </div>
 
     <script src="../dist/reveal.js"></script>
+    <script src="../plugin/zoom/zoom.js"></script>
     <script src="../plugin/notes/notes.js"></script>
+    <script src="../plugin/search/search.js"></script>
     <script src="../plugin/markdown/markdown.js"></script>
     <script src="../plugin/highlight/highlight.js"></script>
+
     <script>
       // More info about initialization & config:
       // - https://revealjs.com/initialization/
       // - https://revealjs.com/config/
       Reveal.initialize({
         hash: true,
-		controls: false,
-    progress: true,
-    history: true,
-    center: false,
-    transition: 'fade',
-    viewDistance: 3, // to lazy load iframes
+        controls: false,
+        progress: true,
+        history: true,
+        center: false,
+        transition: "fade",
+        viewDistance: 3, // to lazy load iframes
 
-    reveald3: {
-         runLastState: true, 
-         onSlideChangedDelay: 400,
-         mapPath: false, 
-         tryFallbackURL: false, 
-         disableCheckFile: false, 
-    },
+        reveald3: {
+          runLastState: true,
+          onSlideChangedDelay: 400,
+          mapPath: false,
+          tryFallbackURL: false,
+          disableCheckFile: false
+        },
         // Learn about plugins: https://revealjs.com/plugins/
-        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+        plugins: [
+          RevealZoom,
+          RevealNotes,
+          RevealSearch,
+          RevealMarkdown,
+          RevealHighlight
+        ],
         dependencies: [
           // ...
           { src: "../plugin/reveald3.js" }
