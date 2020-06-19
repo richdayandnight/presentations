@@ -2,6 +2,7 @@
 # Presentations
 
 1. [Demo 1](https://richdayandnight.github.io/presentations/june-4-2020-demo)
+2. [Demo 2](https://richdayandnight.github.io/presentations/june-19-2020-update)
 
 ## To run locally
 
